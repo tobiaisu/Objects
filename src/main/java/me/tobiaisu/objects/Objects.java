@@ -2,6 +2,8 @@ package me.tobiaisu.objects;
 
 public class Objects {
 	public static void main(String[] args) {
+		Cuboid test = new Cuboid();
+		System.out.println(test);
 /*		Rectangle first = new Rectangle(5, 5, "5");
 		Rectangle second = new Rectangle(5, 5);
 		Rectangle third = new Rectangle(5, "5");
@@ -9,12 +11,10 @@ public class Objects {
 		Rectangle fifth = new Rectangle("5");
 		Rectangle sixth = new Rectangle();
 
-		*/Triangle test = new Triangle();
+		Triangle test = new Triangle();
 		Triangle tests = new Triangle();
 		Circle testttt = new Circle();
 		Rectangle kdkdkd = new Rectangle();
-
-		/*
 
 
 		first.info();
@@ -25,7 +25,6 @@ public class Objects {
 		sixth.info();
 
 		test.info();
-		*/
 
 		System.out.println(test);
 		System.out.println(tests);
@@ -36,5 +35,6 @@ public class Objects {
 		System.out.println(test.equals(test));
 		System.out.println(test.equals(tests));
 		System.out.println(Count.getCount());
+		*/
 	}
 }

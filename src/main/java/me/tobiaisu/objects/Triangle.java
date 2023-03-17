@@ -21,7 +21,7 @@ public class Triangle extends Shape {
 	}
 
 	public Triangle(float hypotenuse, float opposite, float adjacent) {
-		super(null);
+		super();
 
 		this.hypotenuse = hypotenuse;
 		this.opposite = opposite;
@@ -41,7 +41,7 @@ public class Triangle extends Shape {
 	}
 
 	public Triangle(float length) {
-		super(null);
+		super();
 
 		this.hypotenuse = length;
 		this.opposite = length;
@@ -53,23 +53,23 @@ public class Triangle extends Shape {
 	public Triangle(String color) {
 		super(color);
 
-		this.hypotenuse = Length.length(scanner, "hypotenuse");
-		this.opposite = Length.length(scanner, "opposite");
+		this.hypotenuse = Size.size(scanner, "hypotenuse");
+		this.opposite = Size.size(scanner, "opposite");
 
 		do {
-			this.adjacent = Length.length(scanner, "adjacent");
+			this.adjacent = Size.size(scanner, "adjacent");
 		} while (this.adjacent >= this.hypotenuse + this.opposite);
 
 		Count.addCount();
 	}
 
 	public Triangle() {
-		super(null);
+		super();
 
-		this.hypotenuse = Length.length(scanner, "hypotenuse");
-		this.opposite = Length.length(scanner, "opposite");
+		this.hypotenuse = Size.size(scanner, "hypotenuse");
+		this.opposite = Size.size(scanner, "opposite");
 
-		this.adjacent = Length.triangleLength(scanner, "adjacent", this.hypotenuse, this.opposite);
+		this.adjacent = Size.triangleSize(scanner, "adjacent", this.hypotenuse, this.opposite);
 
 		Count.addCount();
 	}
@@ -88,15 +88,15 @@ public class Triangle extends Shape {
 	}
 
 	public void setHypotenuse(float hypotenuse) {
-		this.hypotenuse = Length.length(scanner, "hypotenuse");
+		this.hypotenuse = Size.size(scanner, "hypotenuse");
 	}
 
 	public void setOpposite(float opposite) {
-		this.opposite = Length.length(scanner, "opposite");
+		this.opposite = Size.size(scanner, "opposite");
 	}
 
 	public void setAdjacent(float adjacent) {
-		this.adjacent = Length.length(scanner, "adjacent");
+		this.adjacent = Size.size(scanner, "adjacent");
 	}
 
 	public float getPerimeter() {

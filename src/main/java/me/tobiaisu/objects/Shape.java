@@ -15,6 +15,11 @@ public class Shape {
 		}
 	}
 
+	public Shape() {
+		System.out.print("Set color: ");
+		this.color = scanner.next();
+	}
+
 	public String getColor() {
 		return this.color;
 	}

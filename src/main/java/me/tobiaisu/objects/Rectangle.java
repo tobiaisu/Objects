@@ -6,41 +6,41 @@ import java.lang.Math;
 public class Rectangle extends Shape {
 	Scanner scanner = new Scanner(System.in);
 
-	private float width;
+	private float length;
 	private float height;
 
-	public Rectangle(String color, float width, float height) {
+	public Rectangle(String color, float length, float height) {
 		super(color);
 
-		this.width = width;
+		this.length = length;
 		this.height = height;
 
 		Count.addCount();
 	}
 
-	public Rectangle(float width, float height) {
-		super(null);
+	public Rectangle(float length, float height) {
+		super();
 
-		this.width = width;
+		this.length = length;
 		this.height = height;
 
 		Count.addCount();
 	}
 
-	public Rectangle(String color, float length) {
+	public Rectangle(String color, float size) {
 		super(color);
 
-		this.width = length;
-		this.height = length;
+		this.length = size;
+		this.height = size;
 
 		Count.addCount();
 	}
 
-	public Rectangle(float length) {
-		super(null);
+	public Rectangle(float size) {
+		super();
 
-		this.width = length;
-		this.height = length;
+		this.length = size;
+		this.height = size;
 
 		Count.addCount();
 	}
@@ -48,53 +48,53 @@ public class Rectangle extends Shape {
 	public Rectangle(String color) {
 		super(color);
 
-		this.width = Length.length(scanner, "width");
-		this.height = Length.length(scanner, "height");
+		this.length = Size.size(scanner, "width");
+		this.height = Size.size(scanner, "height");
 
 		Count.addCount();
 	}
 
 	public Rectangle() {
-		super(null);
+		super();
 
-		this.width = Length.length(scanner, "width");
-		this.height = Length.length(scanner, "height");
+		this.length = Size.size(scanner, "width");
+		this.height = Size.size(scanner, "height");
 
 		Count.addCount();
 	}
 
 
-	public float getWidth() {
-		return this.width;
+	public float getLength() {
+		return this.length;
 	}
 
 	public float getHeight() {
 		return this.height;
 	}
 
-	public void setWidth(float width) {
-		this.width = Length.length(scanner, "width");
+	public void setLength(float length) {
+		this.length = Size.size(scanner, "width");
 	}
 
 	public void setHeight(float height) {
-		this.height = Length.length(scanner, "height");
+		this.height = Size.size(scanner, "height");
 	}
 
 	public float getDiagonal() {
-		return (float) Math.sqrt(Math.pow(this.width, 2) + Math.pow(this.height, 2));
+		return (float) Math.sqrt(Math.pow(this.length, 2) + Math.pow(this.height, 2));
 	}
 
 	public float getPerimeter() {
-		return 2 * (this.width + this.height);
+		return 2 * (this.length + this.height);
 	}
 
 	public float getContent() {
-		return this.width * this.height;
+		return this.length * this.height;
 	}
 
 	@Override
 	public int hashCode() {
-		return (int) (this.width * this.height) + super.getColor().hashCode();
+		return (int) (this.length * this.height) + super.getColor().hashCode();
 	}
 
 	@Override
@@ -109,8 +109,8 @@ public class Rectangle extends Shape {
 
 		Rectangle rectangle = (Rectangle) object;
 
-		if (this.width == rectangle.width &&
-				this.width == rectangle.width &&
+		if (this.length == rectangle.length &&
+				this.length == rectangle.length &&
 				super.getColor().equals(rectangle.getColor())) {
 			return true;
 		}
@@ -120,7 +120,7 @@ public class Rectangle extends Shape {
 
 	@Override
 	public String toString() {
-		return "Width: " + this.width +
+		return "Length: " + this.length +
 				"\nHeight: " + this.height +
 				"\nColor: " + super.getColor() +
 				"\nDiagonal: " + this.getDiagonal() +

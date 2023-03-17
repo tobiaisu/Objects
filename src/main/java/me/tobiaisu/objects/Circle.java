@@ -17,7 +17,7 @@ public class Circle extends Shape {
 	}
 
 	public Circle(float radius) {
-		super(null);
+		super();
 
 		this.radius = radius;
 
@@ -27,15 +27,15 @@ public class Circle extends Shape {
 	public Circle(String color) {
 		super(color);
 
-		this.radius = Length.length(scanner, "radius");
+		this.radius = Size.size(scanner, "radius");
 
 		Count.addCount();
 	}
 
 	public Circle() {
-		super(null);
+		super();
 
-		this.radius = Length.length(scanner, "radius");
+		this.radius = Size.size(scanner, "radius");
 
 		Count.addCount();
 	}
@@ -49,11 +49,11 @@ public class Circle extends Shape {
 	}
 
 	public void setRadius(float radius) {
-		this.radius = Length.length(scanner, "radius");
+		this.radius = Size.size(scanner, "radius");
 	}
 
 	public void setDiameter(float diameter) {
-		this.radius = Length.length(scanner, "radius") / 2;
+		this.radius = Size.size(scanner, "radius") / 2;
 	}
 
 	public float getPerimeter() {
